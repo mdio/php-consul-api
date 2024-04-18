@@ -101,9 +101,9 @@ trait Unmarshaller
      * @param mixed $value
      * @param string $type
      * @param bool $nullable
-     * @return bool|float|int|string
+     * @return array|float|bool|int|string|null
      */
-    private function buildScalarValue(string $field, mixed $value, string $type, bool $nullable): float|bool|int|string|null
+    private function buildScalarValue(string $field, mixed $value, string $type, bool $nullable): array|float|bool|int|string|null
     {
         // if the incoming value is null...
         if (null === $value) {
